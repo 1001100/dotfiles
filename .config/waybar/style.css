@@ -1,0 +1,188 @@
+
+
+waybar * {
+  border: 4px;
+  border-radius: 4px;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+}
+
+window#waybar {
+  background: rgba(40, 40, 40, 0.85);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  color: #e4e4ef;
+  border: 3px solid #2e2e2e;
+  border-left: 3px solid #2e2e2e;
+  border-right: 3px solid #2e2e2e;
+  
+}
+
+/* === Workspaces (native hyprland/workspaces module) ====================== */
+
+#workspaces {
+  background-color: transparent;
+  padding-left: 14px;
+}
+
+#workspaces button {
+  all: initial;
+  min-width: 0;
+  box-shadow: inherit;
+  padding: 6px 6px;
+  margin: 6px 3px;
+  border: 2px solid #282828;
+  border-radius: 3px;
+  background-color: #282828;
+  color: #ebdbb2;
+}
+
+#workspaces button.active {
+  color: #181818;
+  background-color: #ebdbb2;
+  border: 2px solid #ebdbb2;
+}
+
+#workspaces button:hover {
+  color: #2e3440;
+  background-color: #ebdbb2;
+  border: 2px solid #ebdbb2;
+}
+
+#workspaces button:not(.empty) {
+  border: 2px solid #fe8019;
+}
+/* === Default Module Container Styling ==================================== */
+
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#clock,
+#tray {
+  background-color: #282828;
+  padding: 6px 12px;
+  margin: 6px 6px;
+  color: #ebdbb2;
+  border: 2px solid #fe8019;
+  border-radius: 2px;
+}
+
+/* === Audio ================================================================ */
+#pulseaudio.muted {
+  background-color: #f38ba8;
+}
+
+/* === Network =============================================================== */
+
+#network.disconnected {
+  background-color: #e06c75;
+  color: #282828;
+}
+
+/* === Clock ================================================================== */
+
+#clock {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* === Battery ================================================================ */
+
+/*#battery.warning {
+  background-color: #fab387;
+  color: #2e3440;
+}
+
+#battery.critical {
+  background-color: #bf616a;
+  color: #ffffff;
+}
+
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+*/
+/* === Temperature ============================================================ */
+
+#temperature.critical {
+  background-color: #bf616a;
+  color: #ffffff;
+}
+
+/* === Backlight =============================================================== */
+
+#backlight {
+  background-color: #3b4252;
+}
+
+/* === Idle Inhibitor =========================================================== */
+
+#idle_inhibitor.activated {
+  color: #56b6c2;
+  border-color: #56b6c2;
+}
+
+/* === Swaylock ================================================================= */
+
+#custom-swaylock {
+  color: #e5c07b;
+  font-weight: bold;
+}
+
+/* === Tray ====================================================================== */
+
+#tray {
+  padding: 4px 8px;
+  background-color: #282828;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+/* === Hover Effects (unified across all interactive modules) ================== */
+
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#backlight:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#custom-swaylock:hover,
+#idle_inhibitor:hover,
+#clock:hover,
+#tray:hover {
+  background-color: #4c566a;
+  border: 2px solid #56b6c2;
+  color: #56b6c2;
+  transition: all 0.2s ease-in-out;
+}
+
+/* === Tooltips ================================================================== */
+
+tooltip {
+  color: #56b6c2;
+  background-color: #3b4252;
+  border: 1px solid #56b6c2;
+  font-weight: bold;
+}
+
+tooltip label {
+  color: #78bec7;
+}

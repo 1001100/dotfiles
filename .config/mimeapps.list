@@ -1,0 +1,5 @@
+[Added Associations]
+application/pdf=okular.desktop;firefox-3.desktop;firefox-2.desktop;
+
+[Default Applications]
+application/pdf=okular.desktop;

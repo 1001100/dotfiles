@@ -1,0 +1,44 @@
+* {
+    background-color: transparent;
+    text-color:       rgba ( 205, 214, 244, 100 % );
+}
+window {
+    padding:          5px ;
+    background-color: rgba ( 30, 30, 46, 40 % );
+    border-color:     rgba ( 137, 180, 250, 100 % );
+    border:           2px ;
+    border-radius:    10px ;
+}
+mainbox {
+    padding: 5px ;
+}
+inputbar {
+    padding:          5px ;
+    background-color: rgba ( 49, 50, 68, 50 % );
+    border-radius:    5px ;
+}
+prompt {
+    enabled: false;
+}
+listview {
+    lines: 10;
+}
+element {
+    padding:       3px 8px ;
+    border-radius: 5px ;
+}
+element selected {
+    background-color: transparent;
+    text-color:       rgba ( 137, 180, 250, 100 % );
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element-text selected {
+    text-outline-color: rgba ( 108, 179, 238, 100 % );
+    margin:             10px ;
+    text-outline:       true;
+    text-outline-width: 1;
+    text-color:         rgba ( 108, 179, 236, 100 % );
+}

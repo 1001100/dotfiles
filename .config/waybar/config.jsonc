@@ -1,0 +1,111 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "width": "auto",
+    "spacing": 4,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "network", "battery", "idle_inhibitor"],
+    "modules-center": ["clock"],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": []
+        }
+    },
+
+    "custom/swaylock": {
+        "format": "[ 󰌾 ]",
+        "on-click": "swaylock -f",
+        "tooltip": false
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "clock": {
+        "tooltip-format": "{calendar}",
+        "format": "  {:%I:%M %p    %a, %b %d }  "
+    },
+
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "  {}%"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format-critical": "  {temperatureC}°C",
+        "format": "  {temperatureC}°C",
+        "tooltip": false
+    },
+
+    "backlight": {
+        "format": "󰛨  {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠", "󰃝", "󰃜", "󰃛"]
+    },
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": {
+            "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+            "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        },
+        "format-full": "Charged 󰂅",
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": true
+    },
+
+    "network": {
+        "format-wifi": "{icon}",
+        "format-icons": ["[ 󰤯 ]", "[ 󰤟 ]", "[ 󰤢 ]", "[ 󰤥 ]", "[ 󰤨 ]"],
+        "format-ethernet": "󰀂",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "nm-connection-editor",
+        "interval": 5
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "format-muted": "󰝟  Muted",
+        "format-bluetooth": "󰂯  {volume}%",
+        "format-bluetooth-muted": "󰂲  Muted",
+        "format-source": "  {volume}%",
+        "format-source-muted": "  Muted",
+        "on-click": "pavucontrol"
+    }
+}

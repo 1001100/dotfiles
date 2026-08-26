@@ -1,0 +1,20 @@
+model_list:
+  - model_name: local
+    litellm_params:
+      model: ollama/qwen2.5-coder:32b
+      api_base: http://localhost:11434
+
+# Uncomment later when you want Claude API
+#  - model_name: powerful
+#    litellm_params:
+#      model: claude-sonnet-4-5-20250929
+#      api_key: "sk-ant-your-key-here"
+
+# Privacy settings - disable all logging
+litellm_settings:
+  success_callback: []
+  failure_callback: []
+  telemetry: false
+
+general_settings:
+  disable_spend_logs: true
