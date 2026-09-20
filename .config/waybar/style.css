@@ -60,6 +60,7 @@ window#waybar {
 #pulseaudio,
 #idle_inhibitor,
 #clock,
+#battery,
 #tray {
   background-color: rgba(40, 40, 40, 0.8);
   padding: 6px 12px;
@@ -90,14 +91,25 @@ window#waybar {
 
 /* === Battery ================================================================ */
 
-/*#battery.warning {
-  background-color: #fab387;
-  color: #2e3440;
+#battery.warning {
+  background-color: rgba(40, 40, 40, 0.8);
+  padding: 6px 12px;
+  margin: 6px 6px;
+  color: #ebdbb2;
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px #fab387;
+
+
 }
 
 #battery.critical {
-  background-color: #bf616a;
-  color: #ffffff;
+  background-color: rgba(40, 40, 40, 0.8);
+  padding: 6px 12px;
+  margin: 6px 6px;
+  color: #ebdbb2;
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px #bf616a;;
+
 }
 
 @keyframes blink {
@@ -113,12 +125,17 @@ window#waybar {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-*/
+
 /* === Temperature ============================================================ */
 
 #temperature.critical {
-  background-color: #bf616a;
-  color: #ffffff;
+  background-color: rgba(40, 40, 40, 0.8);
+  padding: 6px 12px;
+  margin: 6px 6px;
+  color: #ebdbb2;
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px #bf616a;;
+
 }
 
 /* === Backlight =============================================================== */
@@ -170,7 +187,7 @@ window#waybar {
 #clock:hover,
 #tray:hover {
   background-color: #4c566a;
-  border: 2px solid #56b6c2;
+  border-color: #56b6c2;
   color: #56b6c2;
   transition: all 0.2s ease-in-out;
 }
